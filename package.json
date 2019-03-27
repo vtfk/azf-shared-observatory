@@ -1,6 +1,6 @@
 {
   "name": "azf-shared-observatory",
-  "description": "Listens to topic, Triggers observatory test",
+  "description": "Listens to topic. Triggers observatory test.",
   "version": "1.0.0",
   "license": "MIT",
   "author": {
