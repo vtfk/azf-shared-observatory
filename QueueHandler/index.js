@@ -1,15 +1,15 @@
 const checkObservatory = require('../lib/check-observatory')
 
 module.exports = async function (context, mySbMsg) {
-  context.log(`job received - ${mySbMsg.id} - start`)
-  const pageUrl = mySbMsg.url
+  context.log(`azf-shared-lighthouse - ${mySbMsg.eventSourceId} - start`)
+  const host = mySbMsg.host
   try {
-    context.log(`job - ${mySbMsg.id} - url - ${pageUrl} - lookup - start`)
-    let result = await checkObservatory(context, pageUrl)
-    context.log(`job - ${mySbMsg.id} - url - ${pageUrl} - lookup - success`)
+    context.log(`azf-shared-lighthouse - ${mySbMsg.eventSourceId} - host - ${host} - observatory - start`)
+    let result = await checkObservatory(context, host)
+    context.log(`azf-shared-lighthouse - ${mySbMsg.eventSourceId} - host - ${host} - observatory - success`)
     context.bindings.mySbQueue = Object.assign({}, mySbMsg, { result: result })
-    context.log(`job - ${mySbMsg.id} - finished`)
+    context.log(`azf-shared-lighthouse - ${mySbMsg.eventSourceId} - host - ${host} - finished`)
   } catch (error) {
-    context.log.error(`job - ${mySbMsg.id} - ${pageUrl} - ${error}`)
+    context.log.error(`azf-shared-lighthouse - ${mySbMsg.eventSourceId} - host - ${host} - ${error}`)
   }
 }
