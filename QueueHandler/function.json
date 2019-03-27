@@ -6,6 +6,7 @@
       "type": "serviceBusTrigger",
       "direction": "in",
       "topicName": "%SERVICEBUS_TOPIC_IN%",
+      "subscriptionName": "%SERVICEBUS_TOPIC_SUBSCRIPTION%",
       "connection": "SERVICEBUS_CONNECTION_IN"
     },
     {
