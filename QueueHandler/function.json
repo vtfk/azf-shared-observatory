@@ -1,0 +1,19 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "%SERVICEBUS_TOPIC_IN%",
+      "connection": "SERVICEBUS_CONNECTION_IN"
+    },
+    {
+      "name": "mySbQueue",
+      "type": "serviceBus",
+      "direction": "out",
+      "topicName": "%SERVICEBUS_TOPIC_OUT%",
+      "connection": "SERVICEBUS_CONNECTION_OUT"
+    }
+  ]
+}

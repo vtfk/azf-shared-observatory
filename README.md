@@ -1,2 +1,8 @@
 # azf-shared-observatory
-Triggers from topic. Checks the Mozilla Observatory status for å page
+
+Listens to topic, Triggers observatory test
+
+# License
+
+[MIT](LICENSE)
+
